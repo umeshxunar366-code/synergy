@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Voyago trip — fill in details and receive instant confirmation." />
+  <title>Book Now — Voyago</title>
+  <link rel="icon" href="assets/favicon/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand"><i class="fa-solid fa-plane-departure"></i> Voyago</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          <a href="booking.html" class="btn btn-primary active">Book Now</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Book Your Trip</h1>
+        <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Booking</span></nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div id="alertBox" aria-live="polite"></div>
+
+        <form class="form" id="bookingForm" novalidate aria-describedby="formDesc">
+          <p id="formDesc" style="margin-bottom: var(--sp-3);">Fields marked <span style="color:var(--color-danger);">*</span> are required.</p>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required aria-required="true" />
+              <span class="error" id="fullNameError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" />
+              <span class="error" id="emailError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="^(\+44\s?|0)7\d{3}\s?\d{6}$" placeholder="07XXX XXXXXX" required aria-required="true" />
+              <span class="error" id="phoneError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="travelers">Number of Travelers <span class="req">*</span></label>
+              <input id="travelers" name="travelers" type="number" min="1" max="20" value="1" required aria-required="true" />
+              <span class="error" id="travelersError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="destination">Destination <span class="req">*</span></label>
+              <select id="destination" name="destination" required aria-required="true">
+                <option value="">Select destination</option>
+                <option>Bali, Indonesia</option>
+                <option>Santorini, Greece</option>
+                <option>Kyoto, Japan</option>
+                <option>Reykjavik, Iceland</option>
+                <option>Marrakech, Morocco</option>
+                <option>Maldives</option>
+                <option>Lake District, UK</option>
+                <option>Kathmandu, Nepal</option>
+                <option>Pokhara, Nepal</option>
+              </select>
+              <span class="error" id="destinationError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="pkg">Package <span class="req">*</span></label>
+              <select id="pkg" name="pkg" required aria-required="true">
+                <option value="">Select package</option>
+                <option>Holiday</option>
+                <option>Honeymoon</option>
+                <option>Adventure</option>
+                <option>Family</option>
+                <option>Corporate</option>
+              </select>
+              <span class="error" id="pkgError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="travelDate">Travel Date <span class="req">*</span></label>
+            <input id="travelDate" name="travelDate" type="date" required aria-required="true" />
+            <span class="error" id="travelDateError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="notes">Special Requests</label>
+            <textarea id="notes" name="notes" placeholder="Dietary needs, accessibility, room preferences..."></textarea>
+          </div>
+
+          <div style="display:flex; gap:var(--sp-3); flex-wrap:wrap;">
+            <button type="submit" class="btn btn-primary btn-lg">Submit Booking</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+        </form>
+
+        <div id="bookingSummaryWrap" style="margin-top: var(--sp-8); display:none;">
+          <div class="booking-summary" id="bookingSummary" aria-live="polite">
+            <h3>Booking Summary</h3>
+            <dl id="summaryList"></dl>
+          </div>
+        </div>
+
+        <section style="margin-top: var(--sp-10);">
+          <h3>Your Recent Bookings</h3>
+          <p style="margin-bottom: var(--sp-4);">Saved in your browser only. Clear anytime.</p>
+          <div id="bookingHistory"></div>
+          <button class="btn btn-ghost" id="clearHistory" style="margin-top: var(--sp-3);"><i class="fa-solid fa-trash"></i> Clear history</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="modal-body">
+      <i class="fa-solid fa-circle-check success" aria-hidden="true"></i>
+      <h3 id="successTitle">Booking Received!</h3>
+      <p style="margin: var(--sp-3) 0;">We've saved your request. Our team will contact you within 24 hours.</p>
+      <button class="btn btn-primary" id="successClose">Great, thanks</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand" style="color:#fff;"><i class="fa-solid fa-plane-departure"></i> Voyago</div><p style="color:#94a3b8; margin-top:var(--sp-3);">Premium travel experiences crafted for curious minds and adventurous hearts.</p></div>
+        <div><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><i class="fa-solid fa-location-dot"></i> West Bromwich, UK</li><li><i class="fa-solid fa-phone"></i> 07344 064688</li><li><i class="fa-solid fa-envelope"></i> hello@voyago.travel</li></ul><div class="socials" style="margin-top:var(--sp-3);"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span id="year"></span> Voyago. All rights reserved.</span><span>Made with <i class="fa-solid fa-heart" style="color:var(--color-danger);"></i> by the Voyago team.</span></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/jquery/custom.jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+VOYAGO - GITHUB PAGES UPLOAD
+
+1. Extract this ZIP on your computer.
+2. Open the extracted folder. Make sure index.html is at the top level.
+3. In your GitHub repository, upload the CONTENTS of this folder (not the ZIP file itself).
+4. Commit the files to the main branch.
+5. GitHub > Settings > Pages > Deploy from a branch > main > /(root) > Save.
+6. Open the GitHub Pages URL after deployment.
+
+VS CODE
+- Open this same folder in VS Code.
+- Use Live Server on index.html.
+- JSON-powered packages/testimonials require a local HTTP server; do not rely on double-clicking index.html with file://.
+
+Compatibility fixes included:
+- All site asset/page references use relative paths suitable for repository GitHub Pages.
+- Missing page-banner background asset is included.
+- .nojekyll is included for static GitHub Pages hosting.
+- HTML/CSS asset references, JSON files/images, and JavaScript syntax were validated.

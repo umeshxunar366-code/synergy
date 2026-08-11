@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse trending destinations curated by Voyago." />
+  <title>Destinations — Voyago</title>
+  <link rel="icon" href="assets/favicon/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand"><i class="fa-solid fa-plane-departure"></i> Voyago</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html" class="active">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Destinations</h1>
+        <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Destinations</span></nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-3 stagger">
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/bali.jpg" alt="Bali temple at sunset" loading="lazy"><span class="card-tag">Popular</span></div>
+            <div class="card-body">
+              <h3 class="card-title">Bali, Indonesia</h3>
+              <p>Tropical beaches, temples, rice terraces and warm island culture.</p>
+              <div class="card-meta"><span class="card-price">from £899</span><a href="booking.html?dest=Bali" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/santorini.jpg" alt="Santorini Oia sunset" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Santorini, Greece</h3>
+              <p>White-washed cliff villages and legendary Aegean sunsets.</p>
+              <div class="card-meta"><span class="card-price">from £1,299</span><a href="booking.html?dest=Santorini" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/kyoto.jpg" alt="Kyoto pagoda with cherry blossoms" loading="lazy"><span class="card-tag">New</span></div>
+            <div class="card-body">
+              <h3 class="card-title">Kyoto, Japan</h3>
+              <p>Ancient temples, cherry blossoms and quiet mountain onsen towns.</p>
+              <div class="card-meta"><span class="card-price">from £1,499</span><a href="booking.html?dest=Kyoto" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/iceland.avif" alt="Iceland northern lights" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Reykjavik, Iceland</h3>
+              <p>Northern lights, geysers, glaciers and black-sand coastlines.</p>
+              <div class="card-meta"><span class="card-price">from £1,899</span><a href="booking.html?dest=Reykjavik" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/marrakech.jpg" alt="Marrakech souk market" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Marrakech, Morocco</h3>
+              <p>Souks, riads and dune-scapes at the edge of the Sahara.</p>
+              <div class="card-meta"><span class="card-price">from £1,099</span><a href="booking.html?dest=Marrakech" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="assets/images/destinations/maldives.jpg" alt="Maldives overwater villa" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Maldives</h3>
+              <p>Overwater villas, coral reefs and slow honeymoon days.</p>
+              <div class="card-meta"><span class="card-price">from £2,199</span><a href="booking.html?dest=Maldives" class="btn btn-ghost">Explore <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand" style="color:#fff;"><i class="fa-solid fa-plane-departure"></i> Voyago</div><p style="color:#94a3b8; margin-top:var(--sp-3);">Premium travel experiences crafted for curious minds and adventurous hearts.</p></div>
+        <div><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><i class="fa-solid fa-location-dot"></i> West Bromwich, UK</li><li><i class="fa-solid fa-phone"></i> 07344 064688</li><li><i class="fa-solid fa-envelope"></i> hello@voyago.travel</li></ul><div class="socials" style="margin-top:var(--sp-3);"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span id="year"></span> Voyago. All rights reserved.</span><span>Made with <i class="fa-solid fa-heart" style="color:var(--color-danger);"></i> by the Voyago team.</span></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/jquery/custom.jquery.js"></script>
+</body>
+</html>

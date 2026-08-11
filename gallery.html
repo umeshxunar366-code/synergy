@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo gallery from Voyago trips around the world." />
+  <title>Gallery — Voyago</title>
+  <link rel="icon" href="assets/favicon/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand"><i class="fa-solid fa-plane-departure"></i> Voyago</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Gallery</h1>
+        <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" role="tablist" aria-label="Gallery filters">
+          <button class="filter-btn active" data-gfilter="all">All</button>
+          <button class="filter-btn" data-gfilter="beach">Beach</button>
+          <button class="filter-btn" data-gfilter="mountain">Mountain</button>
+          <button class="filter-btn" data-gfilter="city">City</button>
+          <button class="filter-btn" data-gfilter="culture">Culture</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <button class="gallery-item" data-cat="beach" data-title="Turquoise Beach" aria-label="Turquoise Beach"><img src="assets/images/gallery/turquoise-beach.jpg" alt="Turquoise beach" loading="lazy"></button>
+          <button class="gallery-item" data-cat="mountain" data-title="Alpine Valley" aria-label="Alpine Valley"><img src="assets/images/gallery/alpine-valley.webp" alt="Alpine valley" loading="lazy"></button>
+          <button class="gallery-item" data-cat="city" data-title="Tokyo Neon Street" aria-label="Tokyo Neon Street"><img src="assets/images/gallery/tokyo-neon-street.webp" alt="Tokyo neon street" loading="lazy"></button>
+          <button class="gallery-item" data-cat="culture" data-title="Buddhist Temple Monk" aria-label="Buddhist Temple Monk"><img src="assets/images/gallery/buddhist-temple-monk.jpg" alt="Buddhist temple monk" loading="lazy"></button>
+          <button class="gallery-item" data-cat="beach" data-title="Palm Cove" aria-label="Palm Cove"><img src="assets/images/gallery/palm-cove.jpg" alt="Palm cove" loading="lazy"></button>
+          <button class="gallery-item" data-cat="mountain" data-title="Snow Peak" aria-label="Snow Peak"><img src="assets/images/gallery/snow-peak.jpg" alt="Snow peak" loading="lazy"></button>
+          <button class="gallery-item" data-cat="city" data-title="New York Skyline" aria-label="New York Skyline"><img src="assets/images/gallery/new-york-skyline.jpg" alt="New York skyline" loading="lazy"></button>
+          <button class="gallery-item" data-cat="culture" data-title="Moroccan Market" aria-label="Moroccan Market"><img src="assets/images/gallery/moroccan-market-spices.jpg" alt="Moroccan market spices" loading="lazy"></button>
+          <button class="gallery-item" data-cat="beach" data-title="Coral Reef" aria-label="Coral Reef"><img src="assets/images/gallery/coral-reef-snorkel.jpg" alt="Coral reef snorkel" loading="lazy"></button>
+          <button class="gallery-item" data-cat="mountain" data-title="Desert Dunes" aria-label="Desert Dunes"><img src="assets/images/gallery/desert-dunes-sunset.jpg" alt="Desert dunes at sunset" loading="lazy"></button>
+          <button class="gallery-item" data-cat="city" data-title="Paris Eiffel" aria-label="Paris Eiffel"><img src="assets/images/gallery/paris-eiffel.avif" alt="Paris Eiffel Tower" loading="lazy"></button>
+          <button class="gallery-item" data-cat="city" data-title="City Skyline Night" aria-label="City Skyline Night"><img src="assets/images/gallery/city-skyline-night.avif" alt="City skyline at night" loading="lazy"></button>
+          <button class="gallery-item" data-cat="culture" data-title="Festival Lanterns" aria-label="Festival Lanterns"><img src="assets/images/gallery/festival-lanterns.jpg" alt="Festival lanterns" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div id="lightboxContent"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand" style="color:#fff;"><i class="fa-solid fa-plane-departure"></i> Voyago</div><p style="color:#94a3b8; margin-top:var(--sp-3);">Premium travel experiences crafted for curious minds and adventurous hearts.</p></div>
+        <div><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><i class="fa-solid fa-location-dot"></i> West Bromwich, UK</li><li><i class="fa-solid fa-phone"></i> 07344 064688</li><li><i class="fa-solid fa-envelope"></i> hello@voyago.travel</li></ul><div class="socials" style="margin-top:var(--sp-3);"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span id="year"></span> Voyago. All rights reserved.</span><span>Made with <i class="fa-solid fa-heart" style="color:var(--color-danger);"></i> by the Voyago team.</span></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/jquery/custom.jquery.js"></script>
+</body>
+</html>
