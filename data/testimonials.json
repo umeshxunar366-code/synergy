@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sarah Thompson",
+    "trip": "Santorini Sunset Getaway",
+    "rating": 5,
+    "quote": "Absolutely magical. Voyago handled every detail so we could just enjoy the sunsets.",
+    "color1": "#f59e0b",
+    "color2": "#dc2626"
+  },
+  {
+    "name": "Rajesh Kumar",
+    "trip": "Everest Base Camp Trek",
+    "rating": 5,
+    "quote": "Our guide was outstanding. Safety, pace and food — all excellent. Would trek again in a heartbeat.",
+    "color1": "#0ea5e9",
+    "color2": "#075985"
+  },
+  {
+    "name": "Maria Gomez",
+    "trip": "Bali Island Escape",
+    "rating": 5,
+    "quote": "Every stop felt hand-picked for us. Best holiday we've had as a couple.",
+    "color1": "#60a5fa",
+    "color2": "#0d6efd"
+  },
+  {
+    "name": "Kenji Tanaka",
+    "trip": "Iceland Aurora Expedition",
+    "rating": 5,
+    "quote": "The Northern Lights night was unforgettable. Loved the small group size.",
+    "color1": "#8b5cf6",
+    "color2": "#6366f1"
+  },
+  {
+    "name": "Amelia Brown",
+    "trip": "Kyoto Cultural Journey",
+    "rating": 4,
+    "quote": "Beautifully paced. Loved the ryokan stay and the tea ceremony.",
+    "color1": "#10b981",
+    "color2": "#059669"
+  },
+  {
+    "name": "Priya Sharma",
+    "trip": "Maldives Overwater Bliss",
+    "rating": 5,
+    "quote": "The overwater villa was a dream. Voyago's concierge was 24/7 responsive.",
+    "color1": "#22d3ee",
+    "color2": "#0e7490"
+  }
+]
