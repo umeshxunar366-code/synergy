@@ -139,7 +139,13 @@ On successful submission the site:
 | Gaurav Shrestha | Head of Operations | CSS, responsive layout, animations, reusable components |
 | Umesh BK | Lead Guide | JavaScript and jQuery — slider, gallery, FAQ, dark mode |
 | Samrajya Dangi | Customer Success | Booking and contact forms, validation, `localStorage`, documentation |
+## GitHub Repository
 
+Shared GitHub Repository:
+https://github.com/umeshxunar366-code/synergy
+
+Live Website:
+https://umeshxunar366-code.github.io/synergy/
 ## Git workflow
 
 ```
