@@ -164,7 +164,7 @@ For any remaining genuine work, each member should commit their own changes usin
 
 - [x] Complete project folder (HTML, CSS, JS, images, JSON data)
 - [x] `README.md` with setup instructions and feature summary
-- [ ] GitHub repository link (add before submission)
+- [ ] - [x] GitHub repository link
 - [ ] Individual 1200-word report (one per member)
 - [ ] Peer assessment form (one per member)
 
